@@ -1,0 +1,422 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #6EC7D9;
+
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+h1 {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3em;
+    margin-bottom: 3em;
+}
+
+.container a{
+    text-decoration: none;
+    margin: 0;
+    font-size: 1em;
+    font-style: normal;
+}
+
+.containerinlog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    justify-content: center;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    animation: float 6s ease-in-out infinite;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.logotitle {
+    width: 25em;
+
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.categorie {
+    color: #7E4B98;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1em;
+}
+
+.list img {
+    width: 5em;
+    height: auto;
+}
+.toevoegenOpenen{
+    margin-bottom: 1.7em;
+}
+
+.list p {
+    width: 96px;
+    height: 72px;
+    background-color: #7E4B98;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+.naam {
+    font-style: italic;
+    font-weight: 400;
+}
+
+header img {
+    width: 2em;
+    height: auto;
+
+}
+
+header div {
+    display: flex;
+    width: 9em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#loginEmail,
+#loginWachtwoord,
+.input {
+    display: block;
+    border-radius: 50px;
+    border: none;
+    padding: 0.5em;
+    margin: 1em;
+    width: 15em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.registreren {
+    width: 30em;
+    background-color: #7E4B98;
+    color: white;
+}
+
+.registreren .input {
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    text-align: left;
+}
+
+.registreren label {
+    margin: 1em 0 0 0;
+    display: block;
+    font-weight: 500;
+}
+
+.registreren p {
+    display: inline;
+}
+
+.registreren img {
+    width: 4em;
+}
+
+.algemeen {
+    width: 30em;
+    height: 30em;
+    background-color: white;
+    position: fixed;
+    margin: 0;
+    top: 10%;
+    border: black solid 2px;
+    display: none;
+}
+.algemeen div{
+    margin: 6em 1em 1em 1em;
+}
+.algemeen div img{
+    width: 8em;
+}
+
+.uploaden{
+    position: fixed;
+    width: 15em;
+    height: 15em;
+    background-color: #7E4B98;
+    top: 30%;
+    left: 42%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 50px;
+    display: none;
+    
+}
+.uploaden div{
+    margin-bottom: 2em;
+}
+.uploaden img{
+    width: 2em;
+    position: absolute;
+    top: 1em;
+    right: 1.5em;
+    
+}
+a {
+    font-style: italic;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+
+
+.button {
+    padding: 0.5em;
+    font-style: normal;
+    color: white;
+    background-color: blue;
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 33%;
+}
+
+fieldset {
+    background-color: grey;
+}
+
+p {
+    margin: 0.1em;
+}
+
+.lekker {
+    margin-top: 1em;
+    width: auto;
+    padding: 1em;
+    color: green;
+    font-weight: 550;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.nietlekker {
+    text-align: center;
+    margin-top: 1em;
+    width: auto;
+    padding: 1em;
+    color: #7E4B98;
+    font-weight: 550;
+    color: red;
+    font-size: 1.2em;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 2em;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 1);
+}
+
+section {
+    background-color: white;
+    width: 40em;
+    border-radius: 20px 20px 0 0;
+}
+
+h2 p {
+    display: inline;
+    color: white;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.bewerkenProfiel{
+    background-color: #955CB7;
+    color: white;
+    padding: 1em;
+}
+.bewerkenProfiel input{
+    display: inline;
+}
+.profiles {
+    background-color: white;
+    height: 15em;
+    width: 15em;
+    margin: 1em;
+    position: relative;
+}
+
+.profiles img {
+    width: 2em;
+    position: absolute;
+    bottom: 38px;
+    right: 5px;
+
+}
+
+h2 {
+    background: #7E4B98;
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+    height: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+.profielh2:after {
+    content: '';
+    position: absolute;
+    border-right: 1px white solid;
+    height: 2em;
+    transform: translateX(-50%);
+}
+
+.bottom {
+    bottom: 0px;
+    padding:2px 0;
+    color: white;
+    width: 100%;
+    font-size: 0.8em;
+    position: absolute;
+    text-align: center;
+    background-color: blue;
+}
+
+.top {
+    width: 100%;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 500;
+    padding:2px 0;
+}
+.bottom p:first-child { 
+    color: lightgreen;
+} 
+.bottom p:nth-child(2)  { 
+    color: red;
+} 
+
+
+
+.overlay {
+    height: 80%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 7%;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 0;
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+/*.overlay zat ervoor*/
+.closebtn { 
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: black;
+}
+
+.registreren .closebtn { 
+    top: 5px;
+    right: 30px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+

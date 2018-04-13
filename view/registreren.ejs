@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registreren</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <fieldset class="registreren">
+            <legend>Registreren</legend>
+            <form id="signup" name="signup" action="/registrerenPost" method="post">
+               
+                <label for="vNaam">Volledige Naam</label>
+                <input class="input" name="vName" type="text" /><br>
+                
+                <label for="geslacht">Geslacht</label>
+                <input type="radio" name="geslacht" value="man"> Man<br>
+                <input type="radio" name="geslacht" value="vrouw"> Vrouw<br>
+                <input type="radio" name="geslacht" value="ander"> Ander<br>
+
+                <label for="datum">Geboortedatum</label>
+                <input class="input" name="geboortedatum" type="date" /><br>
+
+                <label for="woonplaats">Woonplaats</label>
+                <input class="input" name="woonplaats" type="text" /><br>
+
+                <label for="email">Email Address</label>
+                <input class="input" name="email" type="text" /><br>
+
+                <label for="wachtwoord">Wachtwoord</label>
+                <input class="input" name="wachtwoord" type="password" />
+                
+                <label for="wachtwoordbevestigen">Wachtwoord Bevestigen</label>
+                <input class="input" name="wachtwoordbevestigen" type="password" /><br>
+                
+                <p>Wat vind je lekker?<img class="lekkerAdd" src="/static/img/Toevoegen.png" alt=""></p>
+                <select name="lekker" id="">
+                    <option value="kaas">Kaas</option>
+                    <option value="gebak">Gebak</option>
+                    <option value="vis">Vis</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="vlees">Vlees</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="noten">Noten</option>
+                    <option value="groentes">Groentes</option>
+                </select>
+                <!--</option>
+               
+                <div class="algemeen">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div>
+                        <img src="/static/img/Algemeen/CakeIcon.png" alt="">
+                        <img src="/static/img/Algemeen/Cheese.png" alt="">
+                        <img src="/static/img/Algemeen/Fish.png" alt="">
+                        <img src="/static/img/Algemeen/Fruit.png" alt="">
+                        <img src="/static/img/Algemeen/meat.png" alt="">
+                        <img src="/static/img/Algemeen/Pizza.png" alt="">
+                        <img src="/static/img/Algemeen/Nuts.png" alt="">
+                        <img src="/static/img/Algemeen/veggie.png" alt="">
+                    </div>
+                </div>
+-->
+                <label for="lekkergerecht">Welke gerechten vind je lekker?</label>
+                <input class="input" name="lekkergerecht" type="text" /><br>
+                
+                
+                
+                <p>Wat vind je niet lekker?<img class="lekkerAdd" src="/static/img/Toevoegen.png" alt=""></p>
+                <select name="nietlekker" id="">
+                    <option value="kaas">Kaas</option>
+                    <option value="gebak">Gebak</option>
+                    <option value="vis">Vis</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="vlees">Vlees</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="noten">Noten</option>
+                    <option value="groentes">Groentes</option>
+                </select>
+                <!--
+                <div class="algemeen">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div>
+                        <img src="/static/img/Algemeen/CakeIcon.png" alt="">
+                        <img src="/static/img/Algemeen/Cheese.png" alt="">
+                        <img src="/static/img/Algemeen/Fish.png" alt="">
+                        <img src="/static/img/Algemeen/Fruit.png" alt="">
+                        <img src="/static/img/Algemeen/meat.png" alt="">
+                        <img src="/static/img/Algemeen/Pizza.png" alt="">
+                        <img src="/static/img/Algemeen/Nuts.png" alt="">
+                        <img src="/static/img/Algemeen/veggie.png" alt="">
+                    </div>
+                </div>
+-->
+                <label for="nietlekkergerecht">Welke gerechten vind je <b>niet</b> lekker?</label>
+                <input class="input" name="nietlekkergerecht" type="text" /><br>
+                <input type="submit" value="Upload">
+
+<!--
+
+                <a class="button" href="/ingelogd">Registreren</a>
+-->
+            </form>
+        </fieldset>
+
+    </div>
+    <script src="/Java/java.js"></script>
+</body>
+
+</html>

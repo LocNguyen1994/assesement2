@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ingelogd</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <span class="nav"> nav </span>
+        <div>
+            <img src="img/message.png" alt="">
+            <img src="img/Likes.png" alt="">
+        </div>
+
+
+    </header>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+
+            <a href="/eigenprofiel">Home</a>
+            <a href="/matchen">Zoek naar mensen!</a>
+            <a href="#">Instellingen</a>
+            <a href="#">Help</a>
+            <a href="/index">Uitloggen</a>
+        </div>
+    </div>
+    <% data.forEach(function (entity){%>
+
+        <div class="container">
+            <section>
+                <h2>
+                    <p>Bewerk profiel</p>
+                </h2>
+                <div class="bewerkenProfiel">
+                   <form action="/bewerkprofiel" method="post">
+                    <label for="vNaam">Volledige Naam</label>
+                    <input class="input" name="vName" type="text" value="<%= entity.vName %>" /><br>
+
+                    <label for="geslacht">Geslacht</label>
+                    <input type="radio" name="geslacht" value="man"> Man<br>
+                    <input type="radio" name="geslacht" value="vrouw"> Vrouw<br>
+                    <input type="radio" name="geslacht" value="ander"> Ander<br>
+
+                    <label for="datum">Geboortedatum</label>
+                    <input class="input" name="geboortedatum" type="date" value="<%= entity.geboortedatum %>" /><br>
+
+                    <label for="woonplaats">Woonplaats</label>
+                    <input class="input" name="woonplaats" type="text" value="<%= entity.woonplaats %>" /><br>
+
+                    <label for="email">Email Address</label>
+                    <input class="input" name="email" type="text" value="<%= entity.email %>" /><br>
+
+                 
+                    <input type="submit" value="Upload">
+                    </form>
+                </div>
+            </section>
+            <%})%>
+        </div>
+        <script src="/javascript.js"></script>
+
+</body>
+
+</html>

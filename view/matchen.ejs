@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>matchen</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <span onclick="openNav()"> nav </span>
+        <div>
+            <img src="img/message.png" alt="">
+            <img src="img/Likes.png" alt="">
+        </div>
+
+
+    </header>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+
+            <a href="eigenprofiel">Home</a>
+            <a href="matchen">Zoek naar mensen!</a>
+            <a href="#">Instellingen</a>
+            <a href="#">Help</a>
+            <a href="index">Uitloggen</a>
+        </div>
+    </div>
+    <h1>
+        <label for="">Match op basis van:</label>
+        <select>
+                      <option value="Groente">Pizza's</option>
+                      <option value="Vlees">Taart</option>
+                      <option value="Fruit">Noodles</option>
+                </select>
+    </h1>
+
+    <div class="container">
+
+        <% data.forEach(function (entity){%>
+
+            <a href="/<%= entity.id %>">
+                <div class="profiles">
+                    <div class="top">
+                        <%= entity.vName %>
+                            <%= entity.geboortedatum.toDateString() %>
+                    </div>
+                    <img src="img/Likes.png" alt="">
+                    <div class="bottom">
+                        <p>
+                            <%= entity.vName %> houd van
+                                <%= entity.lekker %>
+                        </p>
+                        <p>
+                            <%= entity.vName %> houd niet van
+                                <%= entity.nietlekker %>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <%})%>
+    </div>
+
+    <script>
+        var nav = document.querySelector(".nav");
+        var close = document.querySelector(".closebtn");
+
+        function openNav() {
+            console.log("test");
+            document.getElementById("myNav").style.width = "80%";
+        }
+
+        function closeNav() {
+            //                document.querySelector(".algemeen").style.display = "none";
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+
+        nav.addEventListener('click', openNav);
+        close.addEventListener('click', closeNav);
+
+    </script>
+
+
+
+</body>
+
+</html>

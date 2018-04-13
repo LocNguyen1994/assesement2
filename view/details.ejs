@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ingelogd</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <span class="nav"> nav </span>
+        <div>
+            <img src="img/message.png" alt="">
+            <img src="img/Likes.png" alt="">
+        </div>
+
+
+    </header>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+
+            <a href="/eigenprofiel">Home</a>
+            <a href="/matchen">Zoek naar mensen!</a>
+            <a href="#">Instellingen</a>
+            <a href="#">Help</a>
+            <a href="/index">Uitloggen</a>
+        </div>
+    </div>
+    <% data.forEach(function (entity){%>
+        <h1>
+            <div class="avatar">
+                <img src="img/Loc%20PNG.png" alt="">
+            </div>
+            <p><%= entity.vName %></p>
+            <p><%= entity.geboortedatum.toDateString() %></p>
+
+            <!--
+        <p>Loc Nguyen, 23</p>
+        <p class="naam">Heiloo</p>
+-->
+            <p class="naam">
+                <%= entity.woonplaats %>
+            </p>
+        </h1>
+
+        <div class="container">
+            <section>
+                <h2>
+                    <p>Ik ben leuk</p>
+                </h2>
+                <div class="lekker">
+                    <p>Wat vind ik lekker??</p>
+                    <p class="categorie">Algemeen</p>
+                    <div class="list">
+                        <img src="/img/Algemeen/Cheese.png" alt="">
+                        <img src="/img/Algemeen/meat.png" alt="">
+                        <img src="/img/Algemeen/Fish.png" alt="">
+                        <img src="/img/Toevoegen.png" alt="">
+                    </div>
+                    <p class="categorie">Gerechten</p>
+                    <div class="list">
+                        <p>Kip Tandori</p>
+                        <img src="/img/Cake.png" alt="">
+                        <img src="/img/noodles.jpg" alt="">
+                        <p>Pizza met anjovis</p>
+                        <img src="/img/pizza-hawaii.png" alt="">
+                        <p>Aardappel puree</p>
+                        <img src="/img/Toevoegen.png" alt="">
+                    </div>
+                </div>
+
+                <div class="nietlekker">
+                    <p class="">Wat vind ik niet lekker??</p>
+                    <p class="categorie">Algemeen</p>
+                    <div class="list">
+                        <img src="/img/Cake.png" alt="">
+                        <img src="/img/noodles.jpg" alt="">
+                        <img src="/img/pizza-hawaii.png" alt="">
+                        <img src="/img/Toevoegen.png" alt="">
+                    </div>
+                    <p class="categorie">Gerechten</p>
+                    <div class="list">
+                        <img src="/img/Cake.png" alt="">
+                        <img src="/img/noodles.jpg" alt="">
+                        <img src="/img/pizza-hawaii.png" alt="">
+                        <img src="/img/Toevoegen.png" alt="">
+                    </div>
+                </div>
+
+            </section>
+            <%})%>
+        </div>
+        <script>
+            var nav = document.querySelector(".nav");
+            var close = document.querySelector(".closebtn");
+
+            function openNav() {
+                console.log("test");
+                document.getElementById("myNav").style.width = "80%";
+            }
+
+            function closeNav() {
+                //                document.querySelector(".algemeen").style.display = "none";
+                document.getElementById("myNav").style.width = "0%";
+            }
+
+
+            nav.addEventListener('click', openNav);
+            close.addEventListener('click', closeNav);
+   
+
+        </script>
+
+</body>
+
+</html>

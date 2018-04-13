@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ingelogd</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <span class="nav"> nav </span>
+        <div>
+            <img src="img/message.png" alt="">
+            <img src="img/Likes.png" alt="">
+        </div>
+
+
+    </header>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+
+            <a href="/eigenprofiel">Home</a>
+            <a href="/matchen">Zoek naar mensen!</a>
+            <a href="#">Instellingen</a>
+            <a href="#">Help</a>
+            <a href="/index">Uitloggen</a>
+        </div>
+    </div>
+    <% data.forEach(function (entity){%>
+        <h1>
+            <div class="avatar">
+                <img src="img/Loc%20PNG.png" alt="">
+            </div>
+            <p>
+                <%= entity.vName %>
+            </p>
+            <p>
+                <%= entity.geboortedatum.toDateString() %>
+            </p>
+            <!--
+        <p>Loc Nguyen, 23</p>
+        <p class="naam">Heiloo</p>
+-->
+            <p class="naam">
+                <%= entity.woonplaats %>
+            </p>
+        </h1>
+
+        <div class="container">
+            <section>
+                <h2 class="profielh2">
+                    <p>95% compleet</p>
+                    <a href="/profielbewerken">
+                        <p>Bewerk profiel</p>
+                    </a>
+                </h2>
+                <div class="lekker">
+                    <p>Wat vind ik lekker??</p>
+                    <p class="categorie">Algemeen</p>
+                    <div class="list">
+                        <div>
+                            <img src="/img/Algemeen/<%= entity.lekker%>.png" alt="">
+                            <br>
+                            <button type="submit" formmethod="post" formaction="/verwijderlekker">Delete</button>
+                        </div>
+                        <img class="toevoegenOpenen" src="/img/Toevoegen.png" alt="">
+                    </div>
+                    <p class="categorie">Gerechten</p>
+                    <div class="list">
+                        <% data.forEach(function (entity) { %>
+                            <div>
+                                <p>
+                                    <%=entity.lekkergerecht%>
+
+                                </p>
+                                <button>Delete</button>
+                            </div>
+                            <% }) %>
+                                <img class="toevoegenOpenen" src="/img/Toevoegen.png" alt="">
+                    </div>
+                </div>
+
+                <div class="nietlekker">
+                    <p class="">Wat vind ik niet lekker??</p>
+                    <p class="categorie">Algemeen</p>
+                    <div class="list">
+                        <div>
+                            <img src="/img/Algemeen/<%= entity.nietlekker%>.png" alt="">
+                            <button>Delete</button>
+                        </div>
+                        <img class="toevoegenOpenen" src="/img/Toevoegen.png" alt="">
+                    </div>
+                    <p class="categorie">Gerechten</p>
+                    <div class="list">
+                       <div>
+                        <p>
+                            <%= entity.nietlekkergerecht%>
+                        </p>
+                        <button>Delete</button>
+                        </div>
+                        <img class="toevoegenOpenen" src="/img/Toevoegen.png" alt="">
+                    </div>
+                </div>
+
+                <div class="uploaden">
+                    <img class="toevoegenSluiten" src="/img/Sluiten.png" alt="">
+                    <form action="/lekkerToevoegen" method="post">
+                        <div> <select name="lekker" id="">
+                    <option value="kaas">Kaas</option>
+                    <option value="gebak">Gebak</option>
+                    <option value="vis">Vis</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="vlees">Vlees</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="noten">Noten</option>
+                    <option value="groentes">Groentes</option>
+                        </select></div>
+                        <div><input value="upload" type="submit"></div>
+
+                    </form>
+                </div>
+            </section>
+            <%})%>
+        </div>
+        <script src="/javascript.js"></script>
+
+</body>
+
+</html>
